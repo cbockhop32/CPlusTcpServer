@@ -1,8 +1,16 @@
 #include <iostream>
+#include <string>
+
+#include <Networking/tcp_server.hpp>
 
 
-int main()
+using boost::asio::ip::tcp;
+
+int main(int argc, char* argv[])
 {
-    std::cout <<"Hello from Server" << '\n';
+    Networking::TCPServer server {Networking::IPV::V4, 1337};
+
+    server.Run();
+    
     return 0;
 }
