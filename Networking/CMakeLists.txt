@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(Boost 1.75.0 REQUIRED)
 
-file(GLOB SOURCES src/* src/*/* src/*/*/*)
+file(GLOB_RECURSE SOURCES src/*.cpp)
 
 add_library(${PROJECT_NAME} ${SOURCES})
 
